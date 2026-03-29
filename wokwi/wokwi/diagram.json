@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Vitor",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0 },
+    { "type": "wokwi-mq135", "id": "mq135", "top": -100, "left": 200 },
+    { "type": "wokwi-led", "id": "led", "top": 120, "left": 200 }
+  ],
+  "connections": [
+    ["mq135:VCC","esp:5V","red"],
+    ["mq135:GND","esp:GND","black"],
+    ["mq135:AO","esp:34","green"],
+
+    ["led:A","esp:26","green"],
+    ["led:C","esp:GND","black"]
+  ]
+}
